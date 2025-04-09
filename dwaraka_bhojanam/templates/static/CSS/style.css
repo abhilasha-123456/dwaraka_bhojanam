@@ -1,0 +1,464 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #800000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px black;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 4px black;
+}
+
+/* style.css */
+
+/* Common */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar {
+    background-color: #800000;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Menu Page Styles */
+.menu-page .menu-section {
+    padding: 120px 40px 40px 40px;
+    background-color: #fff8f0;
+}
+
+.menu-page .menu-heading {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #800000;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: scale(1.03);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.menu-card h3 {
+    margin: 10px 0 5px 0;
+    color: #800000;
+}
+
+.menu-card p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #800000;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* style.css continued */
+
+/* Login + Signup Combined Page */
+.login-page .login-container {
+    max-width: 400px;
+    margin: 130px auto 40px auto;
+    padding: 30px;
+    background-color: #fff8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.form-toggle button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.form-toggle button.active {
+    background-color: #800000;
+    color: white;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-box input[type="text"],
+.form-box input[type="email"],
+.form-box input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-box button {
+    background-color: #800000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-box button:hover {
+    background-color: #a00000;
+}
+
+/* style.css continued */
+
+/* Cart Page Styles */
+.cart-page .cart-section {
+    max-width: 700px;
+    margin: 130px auto 50px auto;
+    background-color: #fff8f0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 20px;
+  }
+  
+  .cart-items {
+    padding: 20px;
+    text-align: center;
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+  }
+  
+  .cart-summary p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #800000;
+  }
+  
+  .cart-summary button {
+    background-color: #800000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* style.css continued */
+
+/* About Page Styles */
+.about-page .about-section {
+    max-width: 800px;
+    margin: 130px auto 50px auto;
+    background-color: #fff8f0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+  }
+  
+  .about-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 20px;
+  }
+  
+  .about-section p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  /* style.css continued */
+
+/* Gallery Page Styles */
+.gallery-page .gallery-section {
+    max-width: 1000px;
+    margin: 130px auto 60px auto;
+    background-color: #fff8f0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Cart Page Styles */
+.cart-page .cart-section {
+    max-width: 700px;
+    margin: 130px auto 50px auto;
+    background-color: #fff8f0;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 20px;
+  }
+  
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .cart-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+  }
+  
+  .cart-summary p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #800000;
+  }
+  
+  .remove-btn {
+    background-color: #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+  
+  .remove-btn:hover {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  /* Gallery Page Styles */
+  .gallery-page .gallery-section {
+    max-width: 1000px;
+    margin: 130px auto 60px auto;
+    background-color: #fff8f0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-section h1 {
+    text-align: center;
+    color: #800000;
+    margin-bottom: 30px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  

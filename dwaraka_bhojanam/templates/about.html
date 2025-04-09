@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - Dwaraka Bhojanam</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body class="about-page">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+      <span>Dwaraka Bhojanam</span>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/cart">Cart</a></li>
+      <li><a href="/login">Login/Sign Up</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <h1>About Us</h1>
+    <p>
+      Dwaraka Bhojanam is a heartfelt initiative to bring the warmth and authenticity of traditional Mandya-style food to busy professionals in Bangalore. We believe in serving chemical-free, wholesome meals made with love — just like home.
+    </p>
+    <p>
+      Whether you’re an IT professional or living away from your native town, we ensure every bite reconnects you with your roots. We handpick fresh vegetables directly from farmers and prepare every meal in a hygienic kitchen.
+    </p>
+    <p>
+      Join our journey to rediscover the taste of home, one meal at a time.
+    </p>
+  </section>
+</body>
+</html>

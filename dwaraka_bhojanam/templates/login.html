@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login & Signup - Dwaraka Bhojanam</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body class="login-page">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+      <span>Dwaraka Bhojanam</span>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/cart">Cart</a></li>
+      <li><a href="/login">Login/Sign Up</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="login-container">
+    <div class="form-toggle">
+      <button onclick="toggleForm('login')" id="loginBtn" class="active">Login</button>
+      <button onclick="toggleForm('signup')" id="signupBtn">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <form action="/login" method="post" class="login-form form-box" id="loginForm">
+      <h2>Login to Your Account</h2>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+
+    <!-- Signup Form -->
+    <form action="/signup" method="post" class="signup-form form-box" id="signupForm" style="display: none">
+      <h2>Create New Account</h2>
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+</body>
+</html>

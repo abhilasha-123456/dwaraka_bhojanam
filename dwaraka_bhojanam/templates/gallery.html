@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery - Dwaraka Bhojanam</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="gallery-page">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+      <span>Dwaraka Bhojanam</span>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/cart">Cart</a></li>
+      <li><a href="/login">Login/Sign Up</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="gallery-section">
+    <h1>Our Food Gallery</h1>
+    <div class="gallery-grid">
+      {% for i in range(1, 10) %}
+      <div class="gallery-item">
+        <img src="{{ url_for('static', filename='images/gallery' ~ i ~ '.jpg') }}" alt="Dish {{ i }}">
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</body>
+</html>

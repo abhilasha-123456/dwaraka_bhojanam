@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart - Dwaraka Bhojanam</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="cart-page">
+  <nav class="navbar">
+    <div class="logo">
+      <img src="{{ url_for('static', filename='images/logo.jpeg') }}" alt="Logo">
+      <span>Dwaraka Bhojanam</span>
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/menu">Menu</a></li>
+      <li><a href="/cart">Cart</a></li>
+      <li><a href="/login">Login/Sign Up</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <section class="cart-section">
+    <h1>Your Cart</h1>
+    <div class="cart-items">
+      {% if cart_items %}
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart_items %}
+          <tr>
+            <td>{{ item[1] }}</td>
+            <td>₹{{ '%.2f'|format(item[2]) }}</td>
+            <td>{{ item[3] }}</td>
+            <td>₹{{ '%.2f'|format(item[2] * item[3]) }}</td>
+            <td><a href="/remove_from_cart/{{ item[0] }}" class="remove-btn">Remove</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <p>No items in your cart yet.</p>
+      {% endif %}
+    </div>
+    <div class="cart-summary">
+      <p>Total: ₹{{ '%.2f'|format(total) }}</p>
+      {% if cart_items %}
+      <form action="/checkout" method="POST">
+        <button type="submit">Checkout</button>
+      </form>
+      {% else %}
+      <button disabled>Checkout</button>
+      {% endif %}
+    </div>
+  </section>
+</body>
+</html>
